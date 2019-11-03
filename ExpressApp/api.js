@@ -10,4 +10,10 @@ router.get('/user', (req, res) => {
     res.send(users)
 })
 
+router.get('/user/:id', (req, res) => {
+
+    const user = users.find(u => u.id === +req.params.id)
+    res.send(users)
+})
+
 module.exports = router;
